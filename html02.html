@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+     <head>
+          <!-- meta -->
+          <!-- 웹 페이지에 저장된 자료를 간소화하여 표시 -->
+          <!-- 속성 -->
+          <!-- chareset : 웹 페이지의 문자셋을 지정함 -->
+          <!-- name : content 속성과 함께 사용되며, name에서 지정한 변수의 값으로 사용됨 -->
+               <!-- application-name : 웹 페이지의 이름 -->
+               <!-- author : 작성자 -->
+               <!-- description : 웹 페이지 설명 -->
+               <!-- generator : 만든 프로그램 -->
+               <!-- keywords : 웹 페이지에 포함된 내용에 대한 키워드 -->
+               <!-- viewport : 반응형 웹을 위한 설정 -->  
+               <!-- content : 변수가 가르킬 내용 -->
+               <!-- http-equive -->
+               <!-- contnet-type : 웹 페이지에 포함된 컨텐츠 종류 -->
+               <!-- default-style : 웹 페이지의 기본 스타일 -->
+               <!-- refresh : 웹 페이지를 새로고침 할 시간 -->     
+          <meta charset="UTF-8">
+          
+          <title>htm102</title>
+     </head>
+     
+     <body>
+        <!-- web에서 특수기호 사용하기 -->
+        <!-- web에서 특수기호를 사용하려면 '엔티티 기호'를 사용해야 함 -->
+        <!-- 참고 사이트 : http://egloos.zum.com/keep/v/1030642 --> 
+        <h1>특수 기호</h1>
+        <h1>특수    기호</h1>
+        <h1>특수&nbs;&nbsp;&nbs;&nbsp;기호</h1>
+        <h1> &lt;h1&gt; </h1>
+     
+     
+        <!-- <h1></h1> ~ <h6></h6> 태그 -->
+        <!-- html에서 제목을 표시할때 사용하는 태그 -->
+        <!-- h1이 가장 크고, h6가 가장 작은 글자 크기임 -->
+        <h1>제목 1</h1>
+        <h2>제목 2</h2>
+        <h3>제목 3</h3>
+        <h4>제목 4</h4>
+        <h5>제목 5</h5>
+        <h6>제목 6</h6>
+
+        <!--<p></p> 태그 -->
+        <!-- 단락을 생성하는 태그 -->
+        <!-- 문자를 표현하는데 가장 많이 사용되는 태그 -->
+        <p>문자를 표현하는데 가장 많이 사용되는 태그 p 태그</p>
+
+        <!-- <br> 태그 -->
+        <!-- 줄 바꾸기 태그 -->
+        <!-- 시작 태그만 존재하는 태그 -->
+        <p>br 태그 사용하기 1</p>
+        <p>br 태그 사용하기 2</p>
+        <p>br 태그 사용하기 3</p>
+        <br><br>
+        <p>br 태그 사용하기 4</p>
+        <p>br 태그 사용하기 5</p>
+        <p>br 태그 사용하기 6</p>
+
+        <!-- <hr> 태그 -->
+        <!-- 한 라인에 수평 줄을 입력하는 태그 -->
+        <!-- 시작 태그만 존재하는 태그 -->
+        <hr>
+        <p>hr 태그 사용하기1</p>
+        <hr>
+        <p>hr 태그 사용하기2</p>
+
+        <!-- <blockquote> 태그 -->
+        <!-- 다른 사이트의 글을 인용할 경우 사용 -->
+        <!-- cite : 어느 사이트에서 인용할 것인지 검색 엔진에 제공-->
+        <blockquote>인용할 내용</blockquote>
+        <br>
+        <blockquote cite="http://ko.wikipedia.org/wiki/HTML">HTML은 하이퍼텍스트 마크업 언어(HyperText Markup Language, 문화어 : 초보문표식달기언어, 하이퍼표문표식달기언어)라는 의미의 웹 페이지를 위한 제배적 마크업 언어다.</blockquote>
+
+        <!-- <pre></pre> 태그-->
+        <!-- 입력한 그대로 화면에 출력시켜주는 태그-->
+        <p>p 태그를 사용하면    입력한 그대로
+           화면에 출력되지 않
+           음
+
+        </p>
+        <br>
+        <pre>pre 태그를 사용하면    입력한 그대로
+             화면에 출력할 수
+             있음
+
+        </pre>
+
+
+        <!-- <strong></strong> <b></b> 태그 -->
+        <!-- 문자를 굵게 표시하는 태그-->
+        <!-- <b></b>, <strong></strong> 태그의 기능이 동일함-->
+        <p>기본적인 문자 굵기</p>
+        <strong>문자를 굵게 표시</strong>
+        <p>p 태그 안에서 <strong>strong 태그</strong>를 사용할 수 있음
+        </p>
+
+        <!-- <em></em>, <i></i> 태그 -->
+        <!-- 문자를 기울여지게 표시하는 태그-->
+        <!-- <i></i>, <em></em> 태그의 기능이 동일함-->
+        <p>기본적인 문자 표시</p>
+        <em>기울여진 문자 표시</em>
+        <p>p 태그 안에서 <em>em 태그</em>를 사용하여 문자는 강조</p>
+
+        <br>
+
+        <p>p 태그 안에서 문자를<strong>표시할 수 있음 <em>기울여지게</em></strong>표시할 수 있음 </p>
+
+        <!-- <q></q> 태그-->
+        <!-- <blockquote></blockquote> 태그와 같이 인용 내용을 표시하는 태그-->
+        <!-- <blockquote></blockquote>와 다른 점은 해당 라인에 직접 인용 문장을 출력함-->
+        <p>WWF'S goal is to :
+        <q>Build a future where people live in harmony with nature.</q>
+        We hope they scuueed</p>
+        <br>
+        <p>WWF'S goal is to :
+          <blockquote>Build a future where people live in harmony with nature.</blockquote>
+          We hope they scuueed</p>     
+
+          <!-- <mark> -->
+          <!-- mark 태그 지정한 부분의 배경색을 형광팬을 사용한 효과를 줌 -->
+          <p>do not forget to buy <mark>milk</mark> today.</p>
+
+          <!-- <ruby></ruby> 태그 -->
+          <!-- 속성 rt를 사용하면 동아시아 글자를 표시-->
+          <ruby>美 <rt>아름다울 미</rt></ruby>
+          
+          <!-- <u></u> 태그-->
+          <!-- 단순 밑줄 긋기-->
+          <p>This is a <u>parragraph</u>.</p>
+
+          <!-- <sub></sub>, <sup></sup> 태그-->
+          <!-- 윗첨자, 아랫첨자를 출력하기 위한 태그-->
+          <p>윗 첨자   E = mc<sup>2</sup></p>
+          <p>아랫 첨자   물의 화학식은 <b>H<sub>2</sub>0</b> 이다</p>
+
+
+          <br><hr><br>
+
+          <!-- 목록을 생성하는 태그-->
+          <!-- <ul></ul> 태그 -->
+          <!-- 순서가 없는 목록을 생성하는 태그-->
+          <!-- <li></li> 태그 -->
+          <!-- 목록을 생성하는 <ul></ul>, <ol></ol>의 자식 태그로 사용되어서 실제 목록을 만들어주는 태그-->
+          <ul>
+               <li>아메리카노</li>
+               <li>카페라떼</li>
+               <li>카푸치노</li>
+          </ul>
+
+          <!-- 목록 단수 넣기-->
+          <!-- ul 태그 안에 ul 태그를 추가 -->
+          <ul>
+               <li>커피</li>
+                    <ul>
+               <li>아메리카노</li>
+               <li>카페라떼</li>
+               <li>카푸치노</li>
+          </ul>
+          <li>차
+               <ul>
+               <li>카모마일</li>
+               <li>자스민</li>
+               <li>로즈마리</li>
+          </ul>
+     </li>
+          </ul>
+
+          <!-- <ol></ol> 태그 -->
+          <!-- 순서가 있는 목록을 생성하는 태그 -->
+          <!-- <li></li> 태그를 사용하여 목록을 생성함 -->
+          <!-- ol의 속성 -->
+          <!-- type : 순서 목록을 표시 받식을 변경할 수 있음-->
+               <!-- 1 : 순서로 표시(기본값) -->
+               <!-- a : 영문 소문자로 표시 -->
+               <!-- A : 영문 대문자로 표시 -->
+               <!-- i : 로마숫자 소문자로 표시 -->
+               <!-- I : 로마숫자 대문자로 표시 -->
+          <!-- start : 시작 숫자를 지정할 수 있음 -->
+          <!-- reversed : 내림차순으로 숫자를 표현 -->
+
+          <!-- 문제 1) ol을 사용하여 좋아하는 과일 목록을 5개를 생성하세요-->
+
+          <h3>좋아하는 과일 TOP 5</h3>
+          <ol>
+               <li>복숭아</li>
+               <li>사과</li>
+               <li>포도</li>
+               <li>오렌지</li>
+               <li>배</li>
+          </ol>
+
+          <!-- 문제 2) ol을 사용하여 좋아하는 과일 목록을 열대과일과 국내과일로 구분하여 화면에 출력하세요 (각각 3개씩) -->
+
+          <h3>좋아하는 과일 TOP 3 (국내과일, 열대과일)</h3>
+          <ol>
+               <li><strong>열대과일</strong></li>
+               <ol>
+                    <li>바나나</li>
+                    <li>코코넛</li>
+                    <li>망고</li>
+               </ol>
+          
+               <li><em>국내과일</em></li>
+          <ol>
+               <li>사과</li>
+               <li>복숭아</li>
+               <li>레몬</li>
+          </ol>
+     </ol>
+
+     <br>
+
+     <h3>우리 나라 산 목록</h3>
+     <ol type= "I" start="5"reversed>
+          <li>백두산</li>
+          <li>한라산</li>
+          <li>금강산</li>
+          <li>소백산</li>
+          <li>송악산</li>
+     </ol>
+
+     <!-- <dl></dl> 태그 -->
+     <!-- ul, ol 과 같은 목록 기호가 존재하지 않는 목록을 생성 -->
+     <!-- <dt></dt>, <dd></dd> 태그를 자식 태그로 사용하여 목록을 생성함 -->
+     <!--<dt></dt> 태그는 목록의 제목을 입력하는데 사용 -->
+     <!-- <dd></dd> 태그는 <li></li> 태그와 동일한 기능인 목록을 생성하는 기능을 가지고 있음 -->
+
+     <dl>
+          <dt>올레 1코스</dt>
+          <dd>코스 : 시흥 초등학교 옆 - 광치기 해변</dd>
+          <dd>거리 : 14.6km(4 ~ 5시간)</dd>
+          <dd>난이도 : 중</dd>
+
+          <dt>올레 2코스</dt>
+          <dd>코스 : 광치기 해변 - 온평 포구</dd>
+          <dd>거리 : 14.5km(4 ~5시간)</dd>
+          <dd>난이도 : 중</dd>
+     </dl>
+
+     <br><hr><br>
+
+
+     <!-- 표를 생성하는 태그 -->
+     <!-- <table></table> 태그 -->
+     <!-- <table></table>, <thead></thead>, <tbody></tbody>. <tfoot></tfoot>, <th></th>, <tr></tr>, <td></td> -->
+
+     <!-- <table></table> 표를 생성하겠다고 선언하는 태그 -->
+     <!-- 내부에 thead, tbody, tr, td,th 를 이용하여 표를 생성할 수 있음 -->
+     <!-- <thead></thead> : 표에서 머릿말 부분을 나타내는 태그 -->
+     <!-- tr과 th를 이용하여 표의 각 항목을 입력 함 -->
+     <!-- <tbody></tbody> : 표의 몸통 부분을 나타내는 태그 -->
+     <!-- tr과 th를 이용하여 표의 데이터 부분을 입력 함 -->
+     <!-- <tr></tr> : 표에서 하나의 라인을 구분하는 태그 -->
+     <!-- <td></td> : 표에서 하나의 칸을 구분하는 태그 -->
+     <!-- <th></th> : 포에서 머릿말 라인의 각 칸을 구분하는 태그 -->
+     <!-- td 와 동일한 기능을 가지고 있으나 thead 안에서 머릿말 부분을 입력하기 위해서 사용함 -->
+
+     <!-- 표 속성 사용하기 -->
+     <!-- colspan, rowspan -->
+     <!-- colsapn : 칸의 갯수를 설정하는 속성 -->
+     <!-- rowspan : 라인의 갯수를 설정하는 속성 -->
+
+     <!-- 가장 기본적인 표 생성(옛날방식)-->
+     <table border="1">
+          <tr>
+               <td>순번</td>
+               <td>이름</td>
+               <td>직업</td>
+               <td>성별</td>
+
+          </tr>
+          <tr>
+               <td>1</td>
+               <td>아이유</td>
+               <td>가수</td>
+               <td>여성</td>
+          </tr>
+          <tr>
+               <td>2</td>
+               <td>장동건</td>
+               <td>영화배우</td>
+               <td>남성</td>
+          </tr>
+          <tr>
+               <td>3</td>
+               <td>블랙핑크</td>
+               <td>가수</td>
+               <td>여성</td>          
+          </tr>
+     </table>
+     <!-- 기본적인 표 생성(요즘 방식) -->
+
+     <table border="1">
+          <thead>
+               <tr>
+                    <th>순번</th>
+                    <th>이름</th>
+                    <th>직업</th>
+                    <th>성별</th>
+               </tr>
+
+          </thead>
+          <tbody>
+               <tr>
+                    <td>1</td>
+                    <td>원빈</td>
+                    <td>영화배우</td>
+                    <td>남성</td>
+
+               </tr>
+               <tr>
+                    <td>2</td>
+                    <td>이나영</td>
+                    <td>영화배우</td>
+                    <td>여성</td>
+
+               </tr>
+               <tr>
+                    <td>3</td>
+                    <td>정인선</td>
+                    <td>배우</td>
+                    <td>여성</td>
+               </tr>
+          </tbody>
+     </table>
+
+     <!-- 문제 3) 자신이 자주 방문하는 게시판의 글을 5개 이상 가져와서 TABLE 태그를 가지고 표를 생성하세요 -->
+
+     <table border="1">
+          <thead>
+               <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>작성일</th>
+                    <th>조회</th>
+                    <th>추천</th>
+               </tr>
+          </thead>
+          <tbody>
+               <tr>
+                    <td>공지</td>
+                    <td>디시인사이드 이미지 업로드 30장으로 변경 안내</td>
+                    <td>운영자</td>
+                    <td>20.01.01</td>
+                    <td>-</td>
+                    <td>-</td>
+               </tr>
+               <tr>
+                    <td>설문</td>
+                    <td>내가 늙었음을 느끼게 해주는 2001년생 스무살 스타는?</td>
+                    <td>운영자</td>
+                    <td>20.01.02</td>
+                    <td>-</td>
+                    <td>-</td>
+               </tr>
+               <tr>
+                    <td>공지</td>
+                    <td>사랑스러운 우리 야옹이에게 최적의 병원을 찾는 방법 [33]</td>
+                    <td>민쿠'ㅅ'</td>
+                    <td>17.11.17</td>
+                    <td>35814</td>
+                    <td>182</td>
+               </tr>
+               <tr>
+                    <td>공지</td>
+                    <td>고양이 양육시 필요한 용품 리스트.TXT [59]</td>
+                    <td>아몬드봄봄</td>
+                    <td>16.04.12</td>
+                    <td>99869</td>
+                    <td>428</td>
+               </tr>
+               <tr>
+                    <td>공지</td>
+                    <td>업자 구별법 이내용 보여 주면 됨 [72]</td>
+                    <td>Norsk Skogkatt</td>
+                    <td>15.01.22</td>
+                    <td>121129</td>
+                    <td>588</td>
+               </tr>
+          </tbody>
+     </table>
+     
+     <br>
+     <!-- colspan, rowspan 사용하기-->
+     <table border="1">
+          <thead>
+               <tr>
+                    <th>순번</th>
+                    <th>이름</th>
+                    <th>국번</th>
+                    <th>전화번호</th>
+                    <th>주소</th>
+                    <th>상세주소</th>
+
+
+               </tr>
+               <tr>
+                    <th>001</th>
+                    <th>홍길동</th>
+                    <th>051</th>
+                    <th>1253-5678</th>
+                    <th>부산</th>
+                    <th>양정</th>
+               </tr>
+               <tr>
+                    <th>002</th>
+                    <th>이순신</th>
+                    <th colspan="2">010-1234-5678</th>
+                    
+                    <th colspan="2">부산 양정</th>
+                    
+               </tr>
+               <tr>
+                    <th rowspan="2">003</th>
+                    <th rowspan="2">송상현</th>
+                    <th rowspan="2">010</th>
+                    <th>9876-5432</th>
+                    <th rowspan="2">부산</th>
+                    <th>양정</th>
+               </tr>
+               <tr>
+                    
+                    
+                    
+                    <th>3265-4512</th>
+                    
+                    <th>전포동</th>
+               </tr>
+               
+          </thead>
+     </table>
+
+
+     <!-- 문제 4) 아래의 표와 같은 형태의 표를 table 을 사용하여 구성하세요 -->
+     
+     <table border="1">
+          <thead>
+               <tr>
+                    <td>이름</td>
+                    <td colspan="2">김영훈</td>
+                    
+                    <td>휴대폰</td>
+                    <td colspan="2">010-4619-5910</td>
+                    
+                   
+               </tr>
+          </thead>
+               <tr>
+                    <th>국번</th>
+                    <th>051</th>
+                    <th>전화번호</th>
+                    <th colspan="3">1234-5678</th>
+                  
+                   
+               </tr>
+               <tr>
+                    <th>주소</th>
+                    <th coulspan="5">부산 양정</th>
+                   
+               </tr>
+               <tr>
+                    <th>자기소개</th>
+                    <th coulspan="5">25,남</th>
+                    
+                    
+               </tr>
+          </thead>
+     </table>
+     
+
+
+
+     </body>
+</html>          
