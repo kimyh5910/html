@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css 1일차</title>
+    <!-- CSS 사용방법 3가지 -->
+    <!-- 1. inline 방식 -->
+        <!-- html 태그에 style 속성을 입력 후 CSS를 입력하는 방식 -->
+        <!-- 우선 순위가 가장 높음 -->
+        <!-- 활용도가 낮음 -->
+        <!-- 다른 html 파일에서 재활용이 불가능함 -->
+        <!-- 다른 html 태그에서 재활용이 불가능함 -->
+    <!-- 2. html태그의 <head></head> 태그안에 <style></style>를 사용하여 CSS 코드를 입력하는 방식 -->
+        <!-- 현재 사용하고 있는 html 파일 내에서만 동작함 -->
+    <!-- 3. 외부 CSS 파일 로드 방식 -->
+        <!-- 외부에서 CSS 파일을 미리 생성해 놓고 link 태그를 통해서 지정한 CSS 파일을 로드하여 사용 -->
+        <!-- 다른 html 파일에서도 동일하게 로드하여 사용할 수 있음 -->
+        <!-- link 태그를 통해서 외부의 CSS 파일을 로드 -->
+        <!-- link 태그를 통해서 다른 서버의 CSS 파일을 로드할 수 있음 -->
+
+    <!-- CSS 로드 규칙 -->
+    <!-- html 이 윗라인부터 한라인씩 로드하여 실행하는 방식이기 때문에 CSS도 윗라인부터 아랫라인으로 한라인씩 로드하여 실행함 -->
+    <!-- 윗라인과 아랫라인이 동일한 속성을 사용하였을 경우에 먼저 로딩된 윗라인의 속성이 무시되고 아랫라인의 속성이 적용됨 -->
+    <!-- html에 inline 방식으로 적용된 CSS는 가장 마지막에 적용됨 -->
+    <!-- 윗라인과 아랫라인이 동일한 속성이 아닐경우 윗라인의 속성은 상속됨 -->
+    <!-- <head></head> -->
+
+    <style>
+        
+        /* 선택자 */
+        /* p { */
+            /* CSS 속성 : 속성값 */
+            /* text-align: center; */
+        /* } */
+    </style>
+    <!-- 외부 CSS 파일 로드 방식 -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- html 파일 내부 style 방식 -->
+    <style>
+        /* 하나의 선택자에 여러개의 CSS속성을 적용 가능함 */
+        #p02{
+            color: royalblue;
+            font-size: 16px;
+        }
+        
+        /* 여러개의 선택자를 사용할 수 있음 */
+        h1 {
+            color: teal;
+        }
+        /* 태그 선택자를 사용하여 section 태그를 선택 */
+        section {
+            width: 600px;
+            padding: 15px;
+            border: 5px solid gray;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- inline 방식 -->
+    <p id="p01" style="color: red;">그리워 우는 된 사람들의 다하지 경, 내린 멀리 어머님, 계십니다. 애기 어머니 마디씩 노새, 걱정도 내일 별 동경과 그러나 봅니다.</p>
+    <!-- html 파일 내부 style 방식 -->
+    <p id="p02">그리워 우는 된 사람들의 다하지 경, 내린 멀리 어머님, 계십니다. 애기 어머니 마디씩 노새, 걱정도 내일 별 동경과 그러나 봅니다.</p>
+    <!-- 외부 CSS 파일 로드 방식 -->
+    <p id="p03">그리워 우는 된 사람들의 다하지 경, 내린 멀리 어머님, 계십니다. 애기 어머니 마디씩 노새, 걱정도 내일 별 동경과 그러나 봅니다.</p>
+    
+    <br><hr><br>
+
+    <div id="container">
+        <section>
+            <h2>Who am I?</h2>
+            <p>프론트엔드 웹 기술(Front-end Web Tech.)에 관심이 많습니다.<br>
+            현재 제주의 한 시골 마을에서 코딩 중입니다.</p>
+        </section>
+
+        <br><hr><br>
+
+        <article>
+            <h2>Who am I?</h2>
+            <p>프론트엔드 웹 기술(Front-end Web Tech.)에 관심이 많습니다.<br>
+            현재 제주의 한 시골 마을에서 코딩 중입니다.</p>
+
+        </article>
+
+        <h2>블루베리와 항산화 효능</h2>
+        <p style="color: blue;">블루베리는 항산화제인 ...</p>
+        <p>메사츄세츠 보스톤에...</p>
+    </div>
+
+    <br><hr><br>
+
+    <div>
+        <h2 id="h201">하나 경, 파란 가득 나는 까닭입니다.</h2>
+        <h2 id="h202">헤일 별 나는 잠, 이런 딴은 별 거외다.</h2>
+        <h2 class="h2class">잠, 쉬이 지나가는 내 다 까닭이요, 별이 듯합니다.</h2>
+        <h3 class="h2class">쉬이 추억과 라이너 내린 무덤 지나가는 오면 있습니다.</h3>
+    </div>
+</body>
+</html>
