@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 2일차 1번 파일</title>
+
+
+    <!-- 외부 서버에서 제공하는 폰트를 로드하여 사용하기 -->
+    <link href="https://fonts.googleapis.com/css?family=Cute+Font|Nanum+Pen+Script&display=swap" rel="stylesheet">
+    
+    <style>
+        /* font-family */
+        /* 글꼴을 설정하는 CSS 속성 */
+        /* 자신의 컴퓨터에 설치되어 있는 글꼴명을 그대로 사용하면 됨 */
+        /* []는 글꼴을 옵션으로 사용할 수도 안할수도 있다는 의미 */
+        /* 글꼴은 , 를 사용하여 여러개를 동시에 사용이 가능함 */
+        /* 글꼴의 순서대로 사용이 됨 */
+        /* '', "" 를 사용하면 글꼴명에 공백문자가 들어간 것도 사용 가능 */ 
+        * {
+            /* font-family: 'Nanum Pen Script', cursive; */
+            font-family: 'Cute Font', cursive;
+            }
+
+            /* @font-face */
+            /* 외부 서버에서 지원하는 폰트가 아닐경우 자신이 직접 폰트를 업로드하여 해당 폰트를 사용자가 사용하게 하는 방식 */
+            /* 폰트는 저작권이 있기 때문에 무료 폰트가 아닌 폰트를 사용하게 되면 법적 문제가 발생할 수 있음 */
+
+            @font-face {
+                font-family: 'Gugi';
+                src: url('Gugi-Regular.eot');
+                src: url('Gugi-Regular.eot?#iefix') format('embedded-opentype'),
+                    url('Gugi-Regular.woff2') format('woff2'),
+                    url('Gugi-Regular.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+        }
+
+        .ng-font {
+            font-family: 'Cute Font', cursive;
+        }
+
+        .w-font {
+            font-family: 'Gugi';
+        }
+
+        p {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p>브라우저 기본 글꼴 사용</p>
+    <p class="ng-font">나눔 펜글씨 웹 폰트 사용</p>
+    <p class="w-font">직접 업로드한 웹 폰트 사용</p>
+</body>
+</html>
