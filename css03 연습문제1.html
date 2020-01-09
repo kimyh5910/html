@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css 3일차 연습문제1</title>
+
+    <style>
+        
+    
+    /*. 자손 선택자를 사용하여 #div01의 자손 태그중 class명이 .subject인 태그 선택 */
+    #div01 .subject {
+        /* 문자의 굵기를 700으로 설정 */
+        font-weight: 700;
+        /* p태그의 기본크기가 16px 이므로 이보다 글자로 표현하면 됨 */
+        font-size: large;
+    }
+    #div01 {
+        /* div의 가로 너비를 500px로 지정 */
+        width: 500px;
+        /* div의 내부 공간을 10px로 지정 */
+        padding: 10px;
+        /* div의 테두리를 굵기 1px, 실선, 아이보리색으로 지정 */
+        border: 2px solid #333333;
+    }
+
+    .div02 .subject{
+       color: #ad3000;
+       font-weight: 700;
+       font-size: 1.3em;
+    }
+    #div02 ul {
+        /* ul의 스타일을 none로 변경 */
+        list-style-type: none;
+    }
+    #div02 li {
+        /* 각 목록의 줄높이 변경 */
+        line-height: 2;
+    }
+
+    #div03 {
+        /* div 너비를 500px로 지정 */
+        width: 500px;
+        /* div 높이를 50px로 지정 */
+        height: 50px;
+
+        margin: 0 auto;
+        background-color: #444444;
+    }
+
+    #div03 h1 {
+        /* 텍스트의 색상을 흰색으로 변경 */
+        color: #ffffff;
+        /* 텍스트의 그림자를 가로 3px, 세로 2px, 번짐 5px, 검정색으로 지정 */
+        text-shadow: 3px 2px 5px #000000;
+    }
+
+    #div04 {
+        /* 전체 너비를 750px 지정 */
+        width: 750;
+        /* 내부 공간을 10px 지정 */
+        padding: 33;
+    }
+    
+    #div04 .book-img {
+        /* float : 그림 옆에 텍스트를 사용할 수 있도록 설정하는 CSS 속성 */
+        float: left;
+        /* 이미지를 왼쪽으로 두고 텍스트를 오른쪽에 두도록 설정 */
+        padding: 10px;
+        /* 내부공간을 10PX 지정 */
+        margin-right: 20px;
+
+    }
+    
+    #div04 h1 {
+        /* h1 태그의 텍스트 크기를 수정 */
+        font-size: 17px;
+    }
+    
+    #div04 p {
+        font-size: 16px;
+
+    }
+
+    #div04.accent {
+        /* 텍스트의 굵기를 굵게 설정 */
+        font-weight: bold;
+        /* 텍스트의 색상을 변경 */
+        color: red;
+    }
+
+    #div04 a, #div04 a:active {
+        color: red;
+        background: yellow;
+    }
+  
+
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <h1>최신 웹 디자인 트렌드</h1>
+        <p><span class="subject">반응형 웹 디자인</span> - 다양한 화면 크기에 최적화하다</p>
+        <p><span class="subject">플랫 디자인</span> - 입체에서 평면으로</p>
+        <p><span class="subject">풀스크린 배경</span> - 콘텐츠에 집중</p>
+        <p><span class="subject">원 페이지 사이트</span> - 한 페이지에 모든 내용을 담다</p>
+        <p><span class="subject">페럴랙스 스크롤링</span> - 동적인 효과로 강한 인상을!</p>
+        <p><span class="subject">웹 폰트</span> - 웹 타이포그래피를 받쳐주는 기술</p>
+    </div>
+
+    <br>
+    <div id="div02">
+        <h1>최신 웹 디자인 트렌드</h1>
+        <ul>
+            <li><span class="subject">반응형 웹 디자인</span> - 다양한 화면 크기에 최적화하다</li>
+            <li><span class="subject">플랫 디자인</span> - 입체에서 평면으로</li>
+            <li><span class="subject">풀스크린 배경</span> - 콘텐츠에 집중</li>
+            <li><span class="subject">원 페이지 사이트</span> - 한 페이지에 모든 내용을 담다</li>
+            <li><span class="subject">페럴랙스 스크롤링</span> - 동적인 효과로 강한 인상을!</li>
+            <li><span class="subject">웹 폰트</span> - 웹 타이포그래피를 받쳐주는 기술</li>
+        </ul>
+    </div>
+
+    <br>
+    <div id="div03">
+        <h1>최신 웹 디자인 트렌드</h1>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div04">
+        <div class="book-img">
+            <h1>웹 디자인 트렌드를 따라잡는 비법 대공개!</h1>
+
+
+        </div>
+
+    </div>
+
+    </div>
+</body>
+</html>
