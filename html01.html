@@ -23,7 +23,16 @@
 <!-- 하나의 html 태그는 시작 태그와 끝 태그를 1:1의 쌍으로 구성되어 있음-->
 <!-- html 태그 중 몇몇은 끝 태그가 없이 시작 태그만 존재하는 것들이 있음-->
 <!-- html에서 속성은 추가 옵션임-->
-<html>
+<!-- html 태그는 다른 html 태그 안에 포함될 수 있음-->
+<!-- html 태그가 다른 html 태그 안에 포함되어 있을 경우 자식 태그라고함-->
+<!-- <html></html> 은 web 화면을 구성하기 위한 가장 기본적인 태그임-->
+<!-- <html></html> 사이에 다른 모든 태그를 입력해서 사용함-->
+
+<!-- <html> 의 내부는 <head></head>, <body></body> 태그로 구성되어 있음 -->
+<!--<html></html>, <head></head>, <body></body> 태그는 하나의 html 문서에서 1번씩만 사용 됨-->
+<!-- <head></head> 는 html 문서를 웹 브라우저가 로딩할때 필요한 리소스(다른 파일)를 미리 로딩하거나, 웹 브라우저에 필요한 정보를 제공할때 사용하는 태그임-->
+<!-- <body>/<body> 는 실제 html 페이지를 구성하는 몸통인 태그-->
+<html lang="en">
     <head>
           <meta charest="UTF-8">
           <title>첫번째 html 페이지</title>
@@ -31,6 +40,7 @@
     <body>
         <!-- <h1>첫번째 html 페이지</h1> -->
         <h2>2번째 html 글자..</h2>
-        <a href="https://www.daum.net">다음 홈페이지</a>>
+        <!-- a 태그에 target 속성을 추가하여 '새창에서 열기' 기능을 추가함-->
+        <a href="https://www.daum.net" target="_blank">다음 홈페이지</a>>
     </body>
 </html>
