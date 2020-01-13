@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 5일차</title>
+
+    <style>
+        /* border-style */
+        /* html 태그의 외부 테두리 선의 스타일을 설정하는 CSS 속성 */
+        /* none(기본값), hidden, dashed, dotted, double, groove, inset, outwet, ridge, solid */
+        #div01 > div {
+            width: 200px;
+            height: 100px;
+            display: inline-block;
+            margin: 15px;
+            /* 테두리 선 굵기 설정 */
+            border-width: 5px;
+        }
+
+        #div01 > .box1 { border-style: dashed;}
+        #div01 > .box2 { border-style: dotted;}
+        #div01 > .box3 { border-style: double;}
+        #div01 > .box4 { border-style: groove;}
+        #div01 > .box5 { border-style: inset;}
+        #div01 > .box6 { border-style: outset;}
+        #div01 > .box7 { border-style: ridge;}
+        #div01 > .box8 { border-style: solid;}
+
+        /* border-width */
+        /* html 태그의 외부 테두리 선의 굵기를 설정하는 CSS 속성 */
+        /* border 속성처럼 한번에 4개의 방향의 굵기를 설정하는 속성 */
+        /* border-top-width, border-right-width, border-bottom-width, border-left-width 총 4개의 방향의 
+        굵기를 설정하는 속성이 따로 존재함 */
+        /* thin, medoum, thinck, 크기(px,주로사용) */
+        /* border-width 엑 값을 1개 입력 시 4개의 방향에 동일한 값을 설정 */
+        /* border-width 에 값을 2개 입력 시 첫번째 값은 top/bottom의 값을 설정하고, 두번째 값은 right/left의 값을 설정함 */
+        /* border-width 에 값을 4개 입력 시 각각 순서대로 top, right, bottom, left 에 값이 설정 됨 */
+        #div02 > div {
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            margin: 15px;
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        #div02 > .box1 { border-width: medium; }
+        #div02 > .box2 { border-width: thin thick; }
+        #div02 > .box3 { border-width: 5px 10px 15px 20px; }
+        #div02 > .box4 { border-top-width: 10px; }
+        #div02 > .box5 { border-right-width: 10px; }
+        #div02 > .box6 { border-bottom-width: 10px; }
+        #div02 > .box7 { border-left-width: 10px; }
+
+        /* border-color */
+        /* html 태그의 테두리 선의 색상을 설정하는 CSS 속성 */
+        /* 미리 정해놓은 색상 이름, hex 코드, rgb코드, hsl 코드를 입력 */
+        /* border-color 사용 시 4개의 방향에 동일한 색상을 설정 */
+        /* border-top-color, border-right-color, border-bottom-color,
+        border-left-color 를 사용하여 각각의 방향에 생상을 다르게 설정할 수 있음 */
+        #div03 > div {
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            margin: 15px;
+            border-style: solid;
+            border-width: thick;
+        }
+
+        #div03 > .box1 {border-color: darkcyan;}
+        #div03 > .box2 {border-top-color: darkblue;}
+        #div03 > .box3 {border-right-color: darkgoldenrod;}
+        #div03 > .box4 {border-bottom-color: darkgreen;}
+        #div03 > .box5 {border-left-color: darkmagenta;}
+    
+    /* border */
+    /* html 태그의 테두리 속성 border-width, border-style, border-color를 한번에 설정할 수 있는 CSS 속성 */
+    /* 입력 순서는 border-width, border-style, border-color */
+    /* 4개의 방향에 따로 값을 설정하기 위한 border-top, border-right, border-bottom, border-left 가 존재함 */
+    #div04 > div {
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+        margin: 15px;
+    }
+
+    #div04 > .box1 {border: 5px solid brown;}
+    #div04 > .box2 {border-top: thick dashed darkcyan ;}
+    #div04 > .box3 {border-right: 5px double crimson;}
+    #div04 > .box4 {border-bottom: 5px dotted forestgreen;}
+    #div04 > .box5 {border-left: 5px solid greenyellow;}
+
+    /* border-radius */
+    /* html 태그의 테두리의 모서리의 각도를 설정하는 CSS 속성 */
+    /* border-radius 속성은 4개의 방향의 각도를 동일하게 설정 */
+    /* 값을 1개만 입력 시 4개의 방향에 동일한 각도를 설정 */
+    /* 값을 2개만 입력 시 첫번째 값은 왼쪽 상단/오른쪽 하단 설정, 두번째 값은 오른쪽 상단/왼쪽 하단 설정 */
+    /* 값을 3개만 입력 시 첫번째 값은 왼쪽 상단, 두번째 값은 오른쪽 상단/왼쪽 하단, 세번째 값은 오른쪽 하단 설정 */
+    /* 값을 4개 입력 시 왼쪽 상단, 오른쪽 상단, 오른쪽 하단, 왼쪽 하단 순서대로 설정 */
+    /* border-top-left-radius, border-top-right-radius,border-bottom-right-radius,
+     border-bottom-left-radius를 사용하여 각 방향에 따로 값을 지정할 수 있음*/
+     /* 크기(px), 백분율(%) */
+    #div05 > div {
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+        margin: 15px;
+        border: medium solid red;
+    }
+
+    #div05 > .box1 {border-top-left-radius: 20px;}
+    #div05 > .box2 {border-top-right-radius: 20px;}
+    #dov05 > .box3 {border-bottom-right-radius: 20px;}
+    #div05 > .box4 {border-bottom-left-radius: 20px;}
+    #div05 > .box5 {border-radius: 20px;}
+    #div05 > .box6 {border-radius: 10% 20%;}
+    #div05 > .box7 {border-radius: 10% 15% 20%;}
+    #div05 > .box8 {border-radius: 10% 15% 20% 25%;}
+    #div05 > .box9 {
+        border-radius: 10% 15% 20% 25%;
+        background: url("pic/001.jpg");
+        background-size: cover;
+        }
+
+        /* 문제 1) border-radius 속성을 사용하여 사각형 모양인 div를 원형으로 출력하고 배경 이미지도 출력하세요 */
+        /* 원형의 지름의 크기는 200px */
+        /* 원형은 완전한 원이어야 함 */
+        /* 테두리 선의 모양은 점선이고 굵기는 2px, 색상은 원하는 색상 */
+    
+    #div06 > div {
+        width: 200px;
+        height: 200px;
+        border: 2px dashed yellow;
+        border-radius: 50%;
+        background: url("pic/002.jpg");
+        }
+        
+        /* box-shadow */
+        /* html 태그의 테두리에 그림자 효과를 설정하는 CSS 속성 */
+        /* none(기본값), 수평, 수직, 흐림, 번짐, 색상 순 */
+        /* 수평 : 왼쪽에서 오른쪽(음수 사용시 반대로) */
+        /* 수직 : 위에서 아래(음수 사용시 반대로) */
+        #div07 > div {
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            margin: 15px;
+            border: 2px solid;
+            border-radius: 20px;
+        }
+
+        #div07 > .box1 { box-shadow: 5px 5px 5px 0px black; }
+        #div07 > .box2 { box-shadow: 5px 5px 0px 5px gray; }
+    
+    /* margin */
+    /* html 태그의 border 외각의 영역을 설정하는 CSS 속성 */
+    /* 다른 html 태그의 margin 영역과 겹쳐질 수 있음 */
+    /* margin 값을 1개 입력 시 4개의 방향에 동일한 값을 설정 */
+    /* margin 값을 2개 입력 시 첫번째 값은 top/bottom 값 설정, 두번째 값은 left/right 값 설정 */
+    /* margin 값을 3개 입력 시 첫번째 값은 top 값 설정, 두번째 값은 left/right 값 설정, 세번째 값은 bottom 값 설정 */
+    /* margin 값을 4개 입력 시 top, right, bottom, left 순으로 값을 설정 */
+    /* margin-top, margin-right, margin-bottom, margin-left 속성을 사용하여 각 방향의 값을 설정 */
+    /* 크기(px), 백분율(%), auto */
+    /* margin : xx auto라고 입력 시 html 태그가 중앙 정렬 됨 */
+    #div08 > div {
+        width: 150px;
+        height: 150px;
+        background: #0094ff;
+    }
+
+    #div08 > .box1 {margin: 30px;}
+    #div08 > .box2 {margin: 30px 50px;}
+    #div08 > .box3 {margin: 20px 30px 40px 50px;}
+    #div08 > .box4 {
+        margin-top: 20px;
+        margin-right: 30px;
+        margin-bottom: 40px;
+        margin-left: 50px;
+    }
+    /* margin-left, margin-right에 값을 auto로 설정하게 되면 전체 가로 너비에서
+     content(content, border, padding)영역의 너비를 뺀 후 남은 영역의 크기를 1/2하여 left/right에 설정함 */
+    #div08 > .box5 { margin: 30px auto;}
+
+    /* padding */
+    /* html 태그의 테두리 부분과 content 영역 사이의 공간을 설정하는 CSS 속성 */
+    /* margin과 동일하게 padding, padding-top, padding-right, padding-bottom, padding-left로 구성되어 있음 */
+    /* 값을 1개 입력 시 4개의 방향에 동일한 값을 설정 */
+    /* 값을 2개 입력 시 첫번째 값은 top/bottom 값 설정, 두번째 값은 left/right 값 설정 */
+    /* 값을 3개 입력 시 첫번째 값은 top 값 설정, 두번째 값은 left/right 값 설정, 세번째 값은 bottom 값 설정 */
+    /* 값을 4개 입력 시 top, right, bottom, left 값을 순서대로 설정 */
+    #div09 > div {
+        width: 200px;
+        height: auto;
+        background: #0094ff;
+        display: inline-block;
+        margin: 15px;
+        color: white;
+    }
+    #div09 > .box1 { padding: 10px;}
+    #div09 > .box2 { padding: 10px 30px;}
+    #div09 > .box3 { padding: 10px 20px 30px 40px;}
+    #div09 > .box4 { 
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        padding-left: 40px;
+        }
+    </style>
+    </head>
+<body>
+    <div id="div01">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+        <div class="box8"></div>
+    </div>
+    
+    <div id="div02">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div03">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div04">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div05">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+        <div class="box8"></div>
+        <div class="box9"></div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div06">
+        <div class="box1"></div>
+    </div>
+
+    <br><hr><br>
+
+<div id="div07">
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+</div>
+
+<br><hr><br>
+
+<div id="div08">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+</div>
+
+<br><hr><br>
+
+<div id="div09">
+    <div class="box1">패딩이란(padding)이란 콘텐츠 영역과 테두리 사이의 여백을 말합니다.</div>
+    <div class="box2">패딩이란(padding)이란 콘텐츠 영역과 테두리 사이의 여백을 말합니다.</div>
+    <div class="box3">패딩이란(padding)이란 콘텐츠 영역과 테두리 사이의 여백을 말합니다.</div>
+    <div class="box4">패딩이란(padding)이란 콘텐츠 영역과 테두리 사이의 여백을 말합니다.</div>
+</div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
