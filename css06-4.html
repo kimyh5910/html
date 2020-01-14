@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css 6일차 4번 파일</title>
+
+    <style>
+        div{
+            border: 3px solid red;
+            padding: 5px;
+        }
+        #img01 { float: left;}
+
+        /* float을 사용 시 부모 태그 영역을 벗어나는 상황이 발생되는데, 이것을 막는 방법 2가지 */
+        /* 1. 부모 태그에 overflow: auto를 사용하는 방법 */
+            /* 스크롤이 발생할 가능성이 있음 */
+        /* 2. 부모 태그에 ::after 를 추가하여 화면에 그려진 이후 동작을 설정하는 방법(추천되는 방식) */
+            /* clear: both. display, content: "" 속성을 사용해야 함 */
+        #div02 {
+            /* overflow : 영역을 벗어나는 컨텐츠의 화면 출력 방식을 설정하는 CSS 속성 */
+            overflow: auto;
+        }
+
+        #img02 { float: left;}
+
+        #img03 { float: left;}
+        #div03::after {
+            clear: both;
+            display: table;
+            content: "";
+        }
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <p>타인의 범죄행위로 인하여 생명·신체에 대한 피해를 받은 국민은 법률이 정하는 바에 의하여 국가로부터 구조를 받을 수 있다.</p>
+        <img src="./pic/001.jpg" alt="" id="img01">
+        <p>대통령은 취임에 즈음하여 다음의 선서를 한다. 행정권은 대통령을 수반으로 하는 정부에 속한다. 
+           공무원의 직무상 불법행위로 손해를 받은 국민은 법률이 정하는 바에 의하여 국가 또는 공공단체에 정당한 배상을 청구할 수 있다.
+           이 경우 공무원 자신의 책임은 면제되지 아니한다.</p>
+        </div>
+
+        <br><br><br>
+        <br><br><br>
+        <br><hr><br>
+        
+        <div id="div02">
+            <p>타인의 범죄행위로 인하여 생명·신체에 대한 피해를 받은 국민은 법률이 정하는 바에 의하여 국가로부터 구조를 받을 수 있다.</p>
+            <img src="./pic/001.jpg" alt="" id="img02">
+            <p>대통령은 취임에 즈음하여 다음의 선서를 한다. 행정권은 대통령을 수반으로 하는 정부에 속한다. 
+            공무원의 직무상 불법행위로 손해를 받은 국민은 법률이 정하는 바에 의하여 국가 또는 공공단체에 정당한 배상을 청구할 수 있다.
+            이 경우 공무원 자신의 책임은 면제되지 아니한다.</p>
+        </div>
+        
+        <br><hr><br>
+
+        <div id="div03">
+            <p>타인의 범죄행위로 인하여 생명·신체에 대한 피해를 받은 국민은 법률이 정하는 바에 의하여 국가로부터 구조를 받을 수 있다.</p>
+            <img src="./pic/001.jpg" alt="" id="img03">
+            <p>대통령은 취임에 즈음하여 다음의 선서를 한다. 행정권은 대통령을 수반으로 하는 정부에 속한다. 
+            공무원의 직무상 불법행위로 손해를 받은 국민은 법률이 정하는 바에 의하여 국가 또는 공공단체에 정당한 배상을 청구할 수 있다.
+            이 경우 공무원 자신의 책임은 면제되지 아니한다.</p>
+        </div>
+</body>
+</html>

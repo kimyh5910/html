@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 6일차 6번 파일</title>
+
+    <style>
+        /* position */
+        /* html 태그를 원하는 위치에 배치하기 위한 CSS 속성 */
+        /* static(기본값), relative, absolute, fixed */
+        /* relative, absolute, fixed는 위치 좌표 속성 top, right, bottom, left를 추가로 사용할 수 있음 */
+        /* static : 상대 위치 좌표 사용 */
+            /* 다른 html 태그의 위치에 따라 현재 html 태그의 위치가 정해짐 */
+        /* relative : 상대 위치 좌표 사용, 위치 설정 속성 top, right, bottom, left 를 추가로 사용함 */
+            /* 다른 html 태그의 위치에 따라 현재 html 태그의 위치가 정해짐 */
+
+        /* absolute : 절대 위치 좌표 사용, 위치 설정 속성 top, right, bottom, left 를 추가로 사용함,
+           부모 태그의 시작위치가 자신의 시작위치(0 x 0)임 */
+            /* 다른 html 태그의 위치와 상관없이 0 x 0에서 시작 */
+            /* 부모 태그의 position 값이 relative 이어야 함(공식) */
+        /* fixed : 절대 위치 좌표 사용, 위치 설정 속성 top, right, bottom, left 를 추가로 사용함, body의 0 x 0이 시작위치임 */
+            /* 다른 html 태그의 위치와 상관없이 0 x 0에서 시작 */
+        
+        /* top : html이 그려질 기준을 지정하는 속성, 상단 기준 */
+        /* right : html이 그려질 기준을 지정하는 속성, 우측기준 */
+        /* bottom : html이 그려질 기준을 지정하는 속성, 하단기준 */
+        /* left : html이 그려질 기준을 지정하는 속성, 좌측기준 */
+            /* 따로 지정을 하지 않으면 top/left가 기준이 됨 */
+            /* 값을 -로 입력 시 기준 위치는 그대로이나 진행방향이 달라짐 */
+
+            .box {
+                width: 200px;
+                height: 200px;
+                border: 2px solid black;
+            }
+
+            .red { background-color: red; }
+            .green { background-color: green; }
+            .blue { background-color: blue; }
+
+            /* static */
+            #div01 > .red { position: static;}
+            #div01 > .green { position: static;}
+            #div01 > .blue { position: static;}
+
+            /* relative */
+            #div02 .red { 
+                position: relative;
+                
+            }
+            #div02 .green { 
+                position: relative;
+                top: 0px;
+                left: 100px;
+            }
+            #div02 .blue { 
+                position: relative;
+                bottom: 100px;
+                right: 100px;
+            }
+
+            /* absolute */
+
+            #div03 {
+                width: 500px;
+                height: 500px;
+                background-color: gray;
+                position: relative;
+            }
+
+            #div03 .red { 
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                /* 기준이 top,left */
+                top: 50px;
+                left: -50px;
+                
+            }
+            #div03 .green { 
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                bottom: 50px;
+                right: 50px; 
+            }
+            #div03 .blue { 
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                top: 10px;
+                left: 10px;
+            }
+
+            #div04 {
+                width: 500px;
+                height: 500px;
+                background-color: gray;
+                position: relative;
+            }
+
+            #div04 .red {
+                position: fixed;
+                bottom: 0px;
+                right: 0px;
+            }
+
+            /* relative */
+            #div05 .box1 {
+                float: left;
+                width: 100px;
+                background: #ffd800;
+                margin-right: 10px;
+                padding: 20px;
+            }
+
+            #div05 .box2 {
+                position: relative;
+                left: -50px;
+                top: 30px;
+                width: 300px;
+                background: #0094ff;
+                float: left;
+                padding: 20px;
+            }
+
+            #div05::after {
+                clear: both;
+                content: "";
+                display: table;
+            }
+
+            /* absolute */
+            #div06  {
+                /* 자식 태그의 position: absolute 이기 때문에 부모 태그의 position이 relative로 설정 됨 */
+                position: relative;
+                width: 300px;
+                height: 300px;
+                border: 1px solid #ccc;
+            }
+
+            #div06 .box {
+                /* 자식 태그가 position : absolute 이면 부모 태그는 반드시 position : relative 이어야 함 */
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background: #0094ff;
+            }
+
+            #crd1 { top: 0; left: 0;}
+            #crd2 { top: 0; right: 0;}
+            #crd3 { bottom: 0; left: 0;}
+            #crd4 { bottom: 0; right: 0;}
+            #crd5 { top: 100px; left: 100px;}
+
+            /* position: sticky */
+            /* 기본형태는 일반 html 태그처럼 스크롤 되다가 특정 위치에 닿게 되면 그곳에 붙어서 고정되는 형태 */
+            #div07 .sticky {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 20px;
+                padding: 5px;
+                background-color: #0094ff;
+                border: 2px solid black;
+            }
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <h3>position : static</h3>
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div02">
+        <h3>position : relative</h3>
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div03">
+        <h3>position : absolute </h3>
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div04">
+        <h3>position : fixed</h3>
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div05">
+        <h3>position : relative</h3>
+        <div class="box1">박스1</div>
+        <div class="box2">박스2</div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div06">
+        <div class="box" id="crd1">crd1</div>
+        <div class="box" id="crd2">crd2</div>
+        <div class="box" id="crd3">crd3</div>
+        <div class="box" id="crd4">crd4</div>
+        <div class="box" id="crd5">crd5</div>
+
+    </div>
+
+    <br><hr><br>
+
+    <div id="div07">
+        <div class="sticky">
+            <p>position : sticky</p>
+            <p>스크롤 되다가 상단에 붙어오</p>
+        </div>
+
+        <div style="padding-bottom: 2000px;">
+            <p>모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다. 타인의 범죄행위로 인하여 생명·신체에 대한 피해를 받은 국민은 법률이 정하는 바에 의하여 국가로부터 구조를 받을 수 있다.</p>
+
+            <p>모든 국민은 그 보호하는 자녀에게 적어도 초등교육과 법률이 정하는 교육을 받게 할 의무를 진다. 대통령은 국회에 출석하여 발언하거나 서한으로 의견을 표시할 수 있다.</p>
+            
+            <p>대통령은 법률이 정하는 바에 의하여 사면·감형 또는 복권을 명할 수 있다. 계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다. 대통령이 궐위된 때 또는 대통령 당선자가 사망하거나 판결 기타의 사유로 그 자격을 상실한 때에는 60일 이내에 후임자를 선거한다.</p>
+            
+            <p>지방자치단체는 주민의 복리에 관한 사무를 처리하고 재산을 관리하며, 법령의 범위안에서 자치에 관한 규정을 제정할 수 있다. 국회의원이 회기전에 체포 또는 구금된 때에는 현행범인이 아닌 한 국회의 요구가 있으면 회기중 석방된다.</p>
+            
+            <p>대통령이 임시회의 집회를 요구할 때에는 기간과 집회요구의 이유를 명시하여야 한다. 대법원장의 임기는 6년으로 하며, 중임할 수 없다. 선거운동은 각급 선거관리위원회의 관리하에 법률이 정하는 범위안에서 하되, 균등한 기회가 보장되어야 한다.</p>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><hr><br>
+
+</body>
+</html>

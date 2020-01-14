@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 6일차 1번 파일</title>
+
+    <style>
+        #div01 div {
+             box-sizing: border-box;
+             
+         }
+
+         #container div {
+             border: 1px solid black;
+         }
+
+
+
+        /* 문제 1) 예제를 기반으로 화면 레이아웃을 헤더, 메인컨텐츠, 사이드바, 푸터 인 화면과 헤더, 왼쪽사이드바, 메인컨텐츠,
+         오른쪽 사이드바, 푸터 인 화면 2개를 생성하세요 */
+         /* 2단 화면은 사이드바의 위치는 상관없음 */
+         /* 사이드바의 크기가 20%를 넘지 않도록 해야 함 */
+    </style>
+    <link rel="stylesheet" href="./css06-2.css">
+</head>
+<body>
+    <div id="div01">
+        <div id="container">
+            <div id="header">
+        <!-- class 는 값을 여러개 가질 수 있음 -->
+        <!-- class 값이 여러개일 경우 여러 class의 속성을 모두 사용함 -->
+               
+                    <h2>헤더</h2>
+                    <p>국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다.</p>
+              
+            </div>
+            <div id="left-sidebar">
+              
+                <h2>왼쪽 사이드바</h2>
+                <p>국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다.</p>
+            
+             </div>
+            <div id="contents">
+               
+                    <h2>메인컨텐츠</h2>
+                    <p>국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다.</p>
+              
+            </div>
+            <div id="right-sidebar">
+               
+                    <h2>오른쪽 사이드바</h2>
+                    <p>국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다.</p>
+              
+            </div>
+            
+            <div id="footer">
+              
+                    <h2>푸터</h2>
+                    <p>국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다.</p>
+              
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div02">
+        <div id="container">
+            <div id="header">
+                <h2>헤더</h2>
+                    <p>국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다.</p>
+              
+            </div>
+            <div id="sidebar">
+                <h2>사이드바</h2>
+                    <p>국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다.</p>
+              
+            </div>
+            <div id="contents">
+               
+                <h2>메인컨텐츠</h2>
+                <p>국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다.</p>
+          
+        </div>
+        <div id="footer">
+              
+            <h2>푸터</h2>
+            <p>국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다.</p>
+      
+    </div>
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

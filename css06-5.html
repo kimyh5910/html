@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 6일차 5번 파일</title>
+
+    <style>
+        #div01::after{
+            clear: both;
+            display: table;
+            content: "";
+        }
+
+        .box1 {
+            /* 한 라인의 크기에서 33%의 너비를 계산하여 너비를 적용 */
+            width: 33%;
+            float: left;
+            padding: 5px;
+            /* 너비와 높이의 크기를 테두리 선을 기준으로 설정 */
+            box-sizing: border-box;
+        }
+        
+        /* 이미지의 너비를 부모 태그의 너비와 동일하게 적용 */
+        img { width: 100%;}
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <div class="box1">
+            <img src="./pic/img/img_5terre.jpg" alt="">
+        </div>
+        <div class="box1">
+            <img src="./pic/img/img_forest.jpg" alt="">
+        </div>
+        <div class="box1">
+            <img src="./pic/img/img_mountains.jpg" alt="">
+        </div>
+</div>
+</body>
+</html>
