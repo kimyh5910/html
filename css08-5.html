@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 8일차 5번파일</title>
+
+    <style>
+        /* 가상 클래스 선택자 */
+        /* 사용자의 사용에 따라서 선택 여부를 확인해 선택하는 선택자 */
+        /* :link : 아직 방문하지 않은 링크를 선택하는 선택자 */
+        /* :visited : 이미 방문한 링크를 선택하는 선택자 */
+        /* :active : 웹 요소를 활성화(동작) 중일 경우 선택하는 선택자 */
+        /* :hover : 마우스 포인터가 html 요소 위에 있을 경우 선택하는 선택자 */
+        /* :focus : html 태그에 초점이 맞춰졌을 때 선택하는 선택자 */
+        #div01 a:link {
+            font-size: 14px;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+         #div01 a:visited {
+            font-size: 14px;
+            padding: 10px;
+            text-decoration: none;
+            color: purple;
+        }
+
+        #div01 a:hover, #div01 a:focus {
+            background: #333;
+            color: #FFF;
+        }
+        
+        #div01 a:active {
+            background: #FF0000;
+        }
+
+        /* :checked */
+        /* checkbox, radiobox에서 해당 항목이 선택되어 있는지 확인하여 선택하는 선택자 */
+        input:checked + span {
+            color: orangered;
+        }
+
+        /* :::before, :::after */
+        /* 지정한 요소의 앞,뒤를 선택하여 컨텐츠 추가 */
+        #div03 ul li {
+            margin: 15px;
+        }
+
+        #div03 li.hot::after {
+            content: "NEW!!";
+            font-size: x-small;
+            padding: 2px 4px;
+            margin: 0 10px;
+            border-radius: 2px;
+            background: #ff0000;
+            color: #fff;
+        }
+
+        #div03 li.hot::before {
+            content: "NEW!!";
+            font-size: x-small;
+            padding: 2px 4px;
+            margin: 0 10px;
+            border-radius: 2px;
+            background: #ff0000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <ul>
+            <li><a href="#">이용안내</a></li>
+            <li><a href="#">객실 소개</a></li>
+            <li><a href="#">예약 방법 및 요금</a></li>
+            <li><a href="#">예약하기</a></li>
+        </ul>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div02">
+        <form action="">
+            <fieldset>
+                <legend>신청과목</legend>
+                <p>이달에 신청할 과목을 선택하세요</p>
+
+                <label for=""><input type="radio" name="subject" value="speaking"><span>회화</span></label>
+                <label for=""><input type="radio" name="subject" value="grammar"><span>문법</span></label>
+                <label for=""><input type="radio" name="subject" value="writing"><span>작문</span></label>
+                
+            </fieldset>
+        </form>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div03">
+        <ul>
+            <li class="hot">제품 A</li>
+            <li>제품 B</li>
+            <li>제품 C</li>
+            <li class="hot">제품 D</li>
+        </ul>
+    </div>
+</body>
+</html>
