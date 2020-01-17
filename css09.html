@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 9일차</title>
+
+    <style>
+        /* transform */
+        /* CSS 통해서 2차원, 3차원 좌표계를 사용하여 이미지 혹은 html 태그를 변형 시키는 CSS 속성 */
+        /* 웹 브라우저 호환성 때문에 -webketit-, -moz-, -o-, -ms- 와 같은 브라우저 접두사를 사용해야 함 */
+        /* 2차원 변형 함수와 3차원 변형 함수가 따로 존재 */
+        /* 2차원 함수 */
+        /* translate(x, y), translateX(x) translateY(y), scale(x,y), sacle(x), scaleY(y), rotate(x, y), rotateX(x), rotate(y), skew(x, y), skewX(x), skewY(y) */
+
+        /* 3차원 함수 */
+        /* matrix3d(n, [n]), translate3d(x, y, z), translateZ(z), scale3d(x, y, z), scaleZ(z), rotate3d(x, y, z), rotateX(x), rotateY(y), rotateZ(z), perspective(n) */
+
+        /* translate() */
+        /* html 태그 요소를 이동시키는 CSS 속성 함수 */
+        /* transform : translate(x, y); 형태로 사용 */
+        #div01 .movex:hover { transform: translateX(100px); }
+        #div01 .movey:hover { transform: translateY(100px); }
+        #div01 .movexy:hover { transform: translate(100px, 100px);}
+
+        /* scale() */
+        /* html 태그 요소를 지정한 크기만큼 확대/축소하는 CSS 속성 함수 */
+        /* () 안의 값이 1보다 크면 확대, 1보다 작으면 축소 */
+        /* transform : scale(x, y); 형태로 사용 */
+        #div02 .scalex:hover { transform: scaleX(1.2); }
+        #div02 .scaley:hover { transform: scaleY(1.5); }
+        #div02 .scale:hover { transform: scale(0.7); }
+
+        /* rotate */
+        /* html 태그 요소를 회전시키는 CSS 속성 함수 */
+        /* html 태그 요소의 중심을 기준으로 회전 */
+        /* 2차원, 3차원 모두 가능 */
+        /* transform: rotate(x, y); 형식으로 사용 */
+        /* () 안의 값을 deg(각도)로 표현 */
+        /* () 안의 값이 양의 정수일 경우 시계방향으로 회전, 음의 정수일 경우 시계 반대방향으로 회전 */
+        /* 3차원 회전 함수를 사용 시 x, y, z 축으로 회전이 가능함 */
+        #div03 .rotate1:hover {
+            -webkit-transform: rotate(20deg);
+            -moz-transform: rotate(20deg);
+            -o-transform: rotate(20deg);
+            -ms-transform: rotate(20deg);
+            transform: rotate(20deg);
+        }
+
+        #div03 .rotate2:active {
+            -webkit-transform: rotate(-40deg);
+            -moz-transform: rotate(-40deg);
+            -o-transform: rotate(-40deg);
+            -ms-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+        }
+
+        #div03 .rotate3d { perspective: 200px; }
+        #div03 .rotatex {
+            -webkit-transform: rotateX(45deg);
+            -moz-transform: rotateX(45deg);
+            -o-transform: rotateX(45deg);
+            -ms-transform: rotateX(45deg);
+            transform: rotateX(45deg);
+        }
+
+        #div03 .rotatey {
+            -webkit-transform: rotateY(45deg);
+            -moz-transform: rotateY(45deg);
+            -o-transform: rotateY(45deg);
+            -ms-transform: rotateY(45deg);
+            transform: rotateY(45deg);
+        }
+
+        #div03 .rotatez {
+            -webkit-transform: rotateZ(45deg);
+            -moz-transform: rotateZ(45deg);
+            -o-transform: rotateZ(45deg);
+            -ms-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+        }
+
+        #div03 .rotatexyz {
+            -webkit-transform: rotate3d(2.5, 1.2, -1.5, 45deg);
+            -moz-transform: rotate3d(2.5, 1.2, -1.5, 45deg);
+            -o-transform: rotate3d(2.5, 1.2, -1.5, 45deg);
+            -ms-transform: rotate3d(2.5, 1.2, -1.5, 45deg);
+            transform: rotate3d(2.5, 1.2, -1.5, 45deg);
+        }
+
+        /* skew */
+        /* html 태그 요소를 지정한 각도만큼 왜곡시키는 CSS 속성 함수 */
+        /* transform : skew(x, y); 형태로 사용 */
+        #div04 .skewx {
+            -webkit-transform: skewX(30deg);
+            -moz-transform: skewX(30deg);
+            -o-transform: skewX(30deg);
+            -ms-transform: skewX(30deg);
+            transform: skewX(30deg);
+            }
+
+        #div04 .skewy {
+            -webkit-transform: skewY(-15deg);
+            -moz-transform: skewY(-15deg);
+            -o-transform: skewY(-15deg);
+            -ms-transform: skewY(-15deg);
+            transform: skewY(-15deg);
+            }
+        
+        #div04 .skewxy {
+            -webkit-transform: skew(-25deg, -15deg);
+            -moz-transform: skew(-25deg, -15deg);
+            -o-transform: skew(-25deg, -15deg);
+            -ms-transform: skew(-25deg, -15deg);
+            transform: skew(-25deg, -15deg);
+            }
+
+        /* transform-origin */
+        /* html 태그 요소의 변형 기준을 지정하여 변경할 수 있는 CSS 속성 */
+        /* transform-origin : x, y, z; 형태로 사용 */
+        /* x : 기준의 x 좌표값(길이, 백분율, left, center, right) */
+        /* y : 기준의 y 좌표값(길이, 백분율, top, center, bottem) */
+        /* z : 기준의 z 좌표값(길이) */
+        #div05 .ltop .pang { transform-origin: left top; }
+        #div05 .rtop .pang {transform-origin: right top; }
+        #div05 .lbottom .pang {transform-origin: left bottom; }
+        #div05 .rbottom .pang {transform-origin: right bottom; }
+        #div05 .pang {
+            -webkit-transform: rotateZ(10deg);
+            -moz-transform: rotateZ(10deg);
+            -o-transform: rotateZ(10deg);
+            -ms-transform: rotateZ(10deg);
+            transform: rotateZ(10deg);
+        }
+
+        /* perspective */
+        /* 3차 변형을 위해서 사용하는 원근감을 표현하기 위한 CSS 속성 */
+        /* 속성값은 0보다 커야 함(원근감크기px, none) */
+        /* perspective-origin */
+        /* 3차원 변형을 위해서 사용하는 원근감의 기준을 설정하는 CSS 속성 */
+        /* x, y 축의 값을 입력(길이, 백분율, left, center, right, top, bottom) */
+        #div06 .rotatex img { transform: rotateX(50deg); }
+        #div06 .pers {
+            perspective-origin: left;
+            perspective: 300px;
+            }
+
+        /* transform-style */
+        /* 3차원 변형에서 부모 태그에서 설정한 3차원 변형을 자식 태그에 상속하는 방법을 설정하는 CSS 속성 */
+        /* flat(평면), preserve-3d(3d효과) */
+        
+        #div07 div {
+            width: 200px;
+            height: 200px;
+            
+        }
+
+        #div07 > div {
+            perspective: 300px;
+            border: 1px solid black;
+        }
+
+        #div07 .box1 {
+            background: #82cbd8;
+            transform: rotateY(45deg);
+        }
+
+        #div07 .box2 {
+            background: #0d6097;
+            transform-origin: left top;
+            transform: rotateX(45deg);
+        }
+
+        #tr-style1 { transform-style: flat; }
+        #tr-style2 { transform-style: preserve-3d;}
+
+        /* backface-visibility */
+        /* html 태그 요소를 변형하여 회전 시킬 경우 html 태그 요소의 뒷면을 화면 출력 여부를 설정하는 CSS 속성 */
+        /* visible(기본값), hidden */
+        #div08 div {
+            width: 200px;
+            height: 200px;
+        }
+
+        #div08 .container {
+            border: 1px solid black;
+            perspective: 300px;
+        }
+
+        #div08 .box:active {
+            background: #83cbd8;
+            -webkit-transform: rotateY(135deg);
+            -moz-transform: rotateY(135deg);
+            -o-transform: rotateY(135deg);
+            -ms-transform: rotateY(135deg);
+            transform: rotateY(135deg);
+        }
+
+        #div08 .box:hover {
+            background: #83cbd8;
+            
+        }
+
+        #back1 {
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -o-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        #back2 {
+            -webkit-backface-visibility: visible;
+            -moz-backface-visibility: visible;
+            -o-backface-visibility: visible;
+            -ms-backface-visibility: visible;
+            backface-visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <div class="origin">
+            <div class="movex">
+                <img src="./pic/005.jpg" alt="">
+            </div>
+        </div>
+        <br>
+        <div class="origin">
+            <div class="movey">
+                <img src="./pic/001.jpg" alt="">
+            </div>
+        </div>
+        <br>
+        <div class="origin">
+            <div class="movexy">
+                <img src="./pic/006.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div02">
+        <div class="origin">
+                <img src="./pic/007.jpg" alt="" class="scalex">
+        </div>
+        <div class="origin">
+                <img src="./pic/001/004.jpg" alt="" class="scaley">
+        </div>
+        <div class="origin">
+                <img src="./pic/001/005.jpg" alt="" class="scale">
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div03">
+        <h3>2차원 회전</h3>
+        <div class="rotate2d">
+            <img src="./pic/005.jpg" alt="" class="rotate1">
+        </div>
+        <br>
+        <div class="rotate2d">
+            <img src="./pic/002.jpg" alt="" class="rotate2">
+        </div>
+
+        <br>
+        <br>
+
+        <h3>3차원 회전</h3>
+        <div class="rotate3d">
+            <img src="./pic/002.jpg" alt="" class="rotatex">
+        </div>
+        <br>
+        <div class="rotate3d">
+            <img src="./pic/005.jpg" alt="" class="rotatey">
+        </div>
+        <br>
+        <div class="rotate3d">
+            <img src="./pic/006.jpg" alt="" class="rotatez">
+        </div>
+        <br>
+        <div class="rotate3d">
+            <img src="./pic/007.jpg" alt="" class="rotatexyz">
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div04">
+        <div>
+            <img src="./pic/008.jpg" alt="" class="skewx">
+        </div>
+        <br>
+        <div>
+            <img src="./pic/007.jpg" alt="" class="skewy">
+        </div>
+        <br>
+        <div>
+            <img src="./pic/006.jpg" alt="" class="skewxy">
+        </div>
+
+    <div id="div05">
+        <div class="ltop">
+            <img src="./pic/002.jpg" alt="" class="pang">
+        </div>
+        <br>
+        <div class="rtop">
+            <img src="./pic/005.jpg" alt="" class="pang">
+        </div>
+        <br>
+        <div class="lbotton">
+            <img src="./pic/006.jpg" alt=""class="pang">
+        </div>
+        <br>
+        <div class="rbottom">
+            <img src="./pic/007.jpg" alt=""class="pang">
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div06">
+        <div>
+            <img src="./pic/007.jpg" alt="">
+        </div>
+        <div class="no-pers">
+            <div class="rotatex">
+                <img src="./pic/007.jpg" alt="">
+            </div>
+        </div>
+        <div class="pers">
+            <div class="rotatex">
+                <img src="./pic/008.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div07">
+        <div>
+            <div class="box1" id="tr-style1">
+                <div class="box2"></div>
+            </div>
+        </div>
+        <br>
+        <div>
+            <div class="box1" id="tr-style2">
+                <div class="box2"></div>
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div08">
+        <div class="container">
+            <div class="box" id="back1">
+                <h1>Back1</h1>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="box" id="back2">
+                <h1>Back2</h1>        
+    </div>
+</body>
+</html>
