@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 10일차 1번 파일</title>
+
+    <style>
+    .prod-list {
+        /* ul의 스타일 변경,  */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }      
+    .prod-list li {
+        position: relative;
+        /* 기본적으로 li이기 때문에 각 리스트가 세로로 출력되어야 하지만 float를 사용하여 왼쪽으로 붙임 */
+        float: left;
+        /* li 내부의 빈공간 삭제 */
+        padding: 0;
+        /* 다음에 출력될 요소와 최소 10px 띄움 */
+        margin: 10px;
+        /* 자손 태그가 자신의 영역 이상 컸을 겨우 화면에 출력하지 않음 */
+        overflow: hidden;
+    }
+
+    .prod-list-img {
+        margin: 0;
+        padding: 0;
+        float: left;
+        z-index: 5;
+    }
+
+    /* float 사용 시 부모태그에서 초기화 해줌 */
+    .prod-list::after {
+        clear: both;
+        display: table;
+        content: "";
+    }
+
+    .prod-list .caption {
+        position: absolute;
+        padding-top: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        width: 300px;
+        height: 200px;
+        top: 200px;
+        opacity: 0;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        /* 우선순위 */
+        z-index: 10;
+    }
+
+    /* 마우스 포인터가 위로 올라갔을 경우 */
+    .prod-list li:hover .caption {
+        /* 0.0 ~ 1.0 까지 사용 */
+        opacity: 1;
+        -moz-transform: translateY(-200px);
+        -ms-transform: translateY(-200px);
+        -o-transform: translateY(-200px);
+        -webkit-transform: translateY(-200px);
+        transform: translateY(-200px);
+    }
+
+    .prod-list .caption h1, .prod-list .caption p {
+        color: #fff;
+        text-align: center;
+    }
+      
+    /* 연습문제 1 */
+        #div01 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        border: 1px solid black;
+        transition-duration: 1s;
+        /* 사각형의 모서리 처리 */
+        border-radius: 5px;
+        -webkit-transition: background 2s;
+        -moz-transition: background 2s;
+        -o-transition: background 2s;
+        transition: background 2s;
+    }
+
+    #div01:hover {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    #div02 {
+        width: 500px;
+        /* margin을 상하는 px 추가, 좌우측은 중앙정렬 */
+        margin: 50px auto;
+    }
+    
+    #div02 > img:hover {
+        border: 1px solid black;
+        border-radius: 10px;
+        -moz-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+        -o-transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg);
+    }
+
+    #div03 > img:hover {
+        transition: all;
+        transition-duration: 1s;
+        transform: scale(1.5);
+        box-shadow: 5px 3px black;
+        transform-origin: left top;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>신상품 목록</h1>
+    <div id="container">
+        <ul class="prod-list">
+            <li>
+                <img src="./pic/001.jpg" alt="">
+                <div class="caption">
+                    <h1>상품 1</h1>
+                    <p>상품 1 설명 텍스트</p>
+                    <p>가격 : 12,345원</p>
+                </div>
+            </li>
+            <li>
+                <img src="./pic/002.jpg" alt="">
+                <div class="caption">
+                    <h1>상품 2</h1>
+                    <p>상품 2 설명 텍스트</p>
+                    <p>가격 : 12,345원</p>
+                </div>
+                </li>
+
+            <li><img src="./pic/005.jpg" alt="">
+                <div class="caption">
+                    <h1>상품 3</h1>
+                    <p>상품 3 설명 텍스트</p>
+                    <p>가격 : 12,345원</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div01">
+
+    </div>
+
+    <br><hr><br>
+
+    <div id="div02">
+        <img src="./pic/006.jpg" alt="">
+    </div>
+
+    <br><hr><br>
+
+    <div id="div03">
+        <img src="./pic/007.jpg" alt="">
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

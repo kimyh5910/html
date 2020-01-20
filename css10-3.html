@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+     body {
+            font-size: 16px;
+        }
+
+        #div04 .wrapper {
+            width: 96%;
+            margin: 0 auto;
+            font-size: 12px;
+        }
+
+        #div04 .header-text {
+            /* rem은 root 폰트 크기에서 배수로 폰트 크기를 계산 */
+            /* root 폰트 크기 16px X 2 가 되어 32px임 */
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        /* 부모 태그인 header-text 의 폰트 크기가 32px 이므로 em은 부모 태그의 폰트 크기에 영향을 받으므로 32px X 2 가 되어 64px 임 */
+        #div04 .fontem { font-size: 2em; }
+        /* root 폰트 크기를 기준으로 하므로 16px X 가 되어 32px */
+        #div04 .fontrem { font-size: 2rem; }
+        /* em은 부모 태그의 폰트 크기에 영향을 받으므로 부모 태그 header-text의 폰트 크기 32px X 1.5가 되어 48px이 됨 */
+        #div04 .fluid-textem { font-size: 1.5em; }
+        /* root 폰트 크기를 기준으로 하므로 16px X 1.5 가 되어 24px */
+        #div04 .fluid-textrem { font-size: 1.5rem; }
+    </style>
+</head>
+<body>
+    <div id="div04">
+        <div class="wrapper">
+            <header class="header-text">
+                <p class="fontem">em 단위를 사용한 글자</p>
+                <p class="fontrem">rem 단위를 사용한 글자</p>
+                <p class="fluid-textem">em 단위를 사용</p>
+                <p class="fluid-textrem">rem 단위를 사용</p>
+            </header>
+
+        </div>
+    </div>            
+</body>
+</html>
