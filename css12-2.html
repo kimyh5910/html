@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 12일차 2번 파일</title>
+
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    #header {
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: purple;
+        color: white;
+    }
+
+    #left-sidebar p {
+        padding: 5px;
+        background-color: rgb(117, 117, 223);
+        color: white;
+    }
+
+    #left-sidebar  {
+        float: left;
+        width: 20%;
+    }
+
+    #right-sidebar{
+        width: 20%;
+        margin-bottom: 20px;
+        float: left;
+        background-color: rgb(117, 117, 223);
+        color: white;
+        text-align: center;
+    }
+
+    #contents {
+        width: 60%;
+        padding: 20px;
+        float: left;
+    }
+
+    .main::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+
+    #footer {
+        padding: 20px;
+        clear: both;
+        background-color: rgb(117, 117, 223);
+        color: white;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 576px) {
+        #left-sidebar {
+            width: 100%;
+        }
+        #contents {
+            width: 100%;
+        }
+        #right-sidebar {
+            width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>chania</h1>
+    </div>
+    <div class="main">
+        <div id="left-sidebar">
+            <p>The Flight</p>
+            <p>The City</p>
+            <p>The Island</p>
+            <p>The Food</p>
+        </div>
+        <div id="contents">
+            <h1>The City</h1>
+            <p>chania is the capital of the chania region</p>
+        </div>
+        <div id="right-sidebar">
+            <h4>what?</h4>
+            <p>chania is a only the island of cute</p>
+            <h4>where?</h4>
+            <p>12314123</p>
+            <h4>How?</h4>
+            <p>12314123</p>
+        </div>
+    </div>
+   
+    <div id="footer">
+        <p>책상을 멀듯이, 별에도 잔디가 있습니다. 이름자 아직 내 쉬이 하나의 같이 있습니다.</p>
+    </div>
+</body>
+</html>
